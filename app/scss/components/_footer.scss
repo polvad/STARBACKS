@@ -1,0 +1,186 @@
+.footer {
+
+  &__nav {
+    position: relative;
+    display: flex;
+    column-gap: 107px;
+    row-gap: 50px;
+    flex-wrap: wrap;
+    margin-bottom: 45px;
+  }
+
+  &__menu {
+    flex-grow: 1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 82px;
+    padding-right: 90px;
+  }
+
+  &__title {
+    cursor: auto;
+    margin-bottom: 5px;
+  }
+
+  &__link {
+    display: block;
+    opacity: 0.4;
+    padding: 4px 0;
+    margin-bottom: 5px;
+    transition: all 0.6s;
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    &:focus {
+      transform: scale(0.95);
+    }
+  }
+
+  &__btn-up {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 80px;
+    height: 80px;
+    background-image: url('../images/arrow.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    transition: all 0.6s;
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    &:focus {
+      transform: scale(0.95);
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 45px 0;
+  }
+
+  &__tel {
+    font-size: 26px;
+    font-weight: 500;
+    letter-spacing: normal;
+    transition: all 0.5s ease-in-out;
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    &:focus {
+      transform: scale(0.95);
+    }
+  }
+
+  &__link-messenger {
+    display: block;
+    transition: all 0.6s;
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    &:focus {
+      transform: scale(0.98);
+    }
+  }
+
+  &__icon-messenger {
+    fill: #05cb4ec7;
+  }
+}
+
+@media(max-width: 992px) {
+  .footer {
+    &__menu {
+      padding: 0;
+    }
+
+    &__btn-up {
+      width: 70px;
+      height: 70px;
+    }
+  }
+}
+
+@media(max-width: 576px) {
+  .footer {
+    &__nav {
+      margin-bottom: 20px;
+    }
+
+    &__link {
+      font-size: 18px;
+      padding: 10px 0;
+    }
+
+    &__menu {
+      width: 100%;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    &__title {
+      position: relative;
+      width: 100%;
+      text-align: left;
+      padding: 5px 0;
+
+      &.active {
+        &::after {
+          content: '-';
+        }
+      }
+
+      &::after {
+        content: '+';
+        position: absolute;
+        top: 0;
+        right: 15px;
+        font-size: 26px;
+      }
+    }
+
+    &__body {
+      height: 0;
+      overflow: hidden;
+      transition: all 0.5s;
+    }
+
+    &__link {
+      padding-left: 20px;
+      border-bottom: 1px solid gray;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+
+    &__btn-up {
+      width: 60px;
+      height: 60px;
+    }
+
+    &__bottom {
+      padding: 26px 0;
+    }
+
+    &__tel {
+      font-size: 20px;
+    }
+
+    &__icon-messenger {
+      width: 30px;
+      height: 30px;
+    }
+  }
+}

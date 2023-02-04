@@ -1,0 +1,157 @@
+.process {
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 70px;
+  }
+
+  &__image {
+    position: relative;
+    background-color: #237249;
+
+    .decor-circel_gray {
+      top: -100px;
+      right: -200px;
+      transform: scale(0.9);
+      opacity: 0.2;
+    }
+
+    .decor-circel_green {
+      bottom: -80px;
+      left: -50px;
+    }
+  }
+
+  &__img {
+    transform: translate(30px, -20px);
+
+  }
+
+  &__circel-decor {
+    width: 186px;
+    height: 186px;
+    right: -65px;
+    top: -40px;
+    z-index: 1;
+  }
+
+  &__content {
+    max-width: 457px;
+    width: 100%;
+  }
+
+  &__title {
+    position: relative;
+    margin-bottom: 63px;
+
+    .decor-circel_green {
+      top: -130px;
+      right: 0;
+      transform: scale(0.7);
+      opacity: 0.3;
+    }
+  }
+
+  &__text {
+    margin-bottom: 63px;
+    line-height: 1.6;
+  }
+
+  &__video {
+    position: relative;
+    height: 275px;
+    background-image: url('../images/process/photo-process.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .decor-circel_gray {
+      top: 0;
+      left: -100px;
+      filter: blur(100px);
+      opacity: 0.2;
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    padding: 20px 40px;
+  }
+
+  &__icon-play {
+    fill: $white;
+    margin-right: 14px;
+  }
+}
+
+@media(max-width: 992px) {
+  .process {
+    &__title {
+      font-size: 70px;
+      margin-bottom: 55px;
+    }
+
+    &__text {
+      margin-bottom: 55px;
+    }
+
+    &__circel-decor {
+      transform: scale(0.7);
+    }
+  }
+}
+
+@media(max-width: 768px) {
+  .process {
+    &__inner {
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+
+    &__image {
+      max-width: 258px;
+
+      .decor-circel_gray {
+        transform: scale(0.7);
+        opacity: 0.15;
+      }
+
+      .decor-circel_green {
+        transform: scale(0.7);
+        opacity: 0.35;
+      }
+    }
+
+    &__circel-decor {
+      right: -90px;
+      top: -73px;
+    }
+
+    &__content {
+      max-width: 100%;
+    }
+
+    &__title {
+      font-size: 55px;
+      margin-bottom: 30px;
+
+      .decor-circel_green {
+        display: none;
+      }
+    }
+
+    &__text {
+      margin-bottom: 30px;
+    }
+
+    &__circel-decor {
+      transform: scale(0.55);
+    }
+  }
+}

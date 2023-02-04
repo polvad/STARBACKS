@@ -1,0 +1,267 @@
+.hero {
+  &__inner {
+    min-height: calc(100vh - 180px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    padding: 20px 56px 20px 0;
+  }
+
+  &__info {
+    max-width: 574px;
+  }
+
+  &__title {
+    position: relative;
+    margin-bottom: 54px;
+
+    .decor-circel_green {
+      top: -50%;
+      left: -20%;
+      opacity: 0.3;
+      transform: scale(1.1);
+      filter: blur(90px);
+    }
+  }
+
+  &__description {
+    line-height: 1.6;
+    margin-bottom: 54px;
+  }
+
+  &__btns {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 54px;
+
+    .decor-circel {
+      &_gray {
+        top: -200%;
+        right: -20%;
+        transform: scale(0.6);
+
+        opacity: 0.1;
+      }
+    }
+  }
+
+  &__btn-small {
+    position: relative;
+    background: $primeryBg;
+
+    &::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: $lg-gray-100;
+      border-radius: inherit;
+      z-index: -1;
+      transform: scale(1.02);
+    }
+  }
+
+}
+
+.progress {
+  display: flex;
+  gap: 50px;
+
+  &__count {
+    font-size: 62px;
+  }
+
+  &__desc {
+    line-height: 1.4;
+  }
+}
+
+.image-hero {
+  position: relative;
+  max-width: 472px;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 130px;
+    right: -214px;
+    width: 860px;
+    height: 700px;
+    background-image: url('../images/decor-line.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+  }
+
+  &__img {
+    object-fit: contain;
+  }
+
+  &__discount {
+    top: 0;
+    right: 0;
+    width: 165px;
+    height: 165px;
+    font-size: 55px;
+    font-weight: 500;
+    transform: rotate(-15deg);
+  }
+
+  .decor-circel {
+    &_gray {
+      top: 0;
+      left: 0;
+      filter: blur(60px);
+      opacity: 0.3;
+    }
+
+    &_green {
+      bottom: 0;
+      right: 0;
+    }
+  }
+}
+
+
+
+@media(max-width:1200px) {
+  .hero {
+    &__inner {
+      padding: 20px 0;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .hero {
+
+    &__info {
+      max-width: 480px;
+    }
+
+    &__title {
+      margin-bottom: 40px;
+    }
+
+    &__description {
+      margin-bottom: 40px;
+    }
+
+    &__btns {
+      margin-bottom: 40px;
+    }
+
+  }
+}
+
+@media (max-width: 820px) {
+  .hero {
+    &__inner {
+      padding: 10px 0;
+      gap: 30px;
+    }
+
+    &__info {
+      max-width: 400px;
+    }
+
+    &__title {
+      font-size: 48px;
+      margin-bottom: 36px;
+    }
+
+    &__description {
+      margin-bottom: 36px;
+      font-size: 16px;
+    }
+
+    &__btns {
+      margin-bottom: 36px;
+    }
+
+  }
+}
+
+@media (max-width: 992px) {
+  .progress {
+    gap: 30px;
+
+    &__count {
+      font-size: 40px;
+    }
+
+  }
+}
+
+@media (max-width: 820px) {
+  .progress {
+    gap: 30px;
+
+    &__count {
+      font-size: 40px;
+    }
+
+    &__desc {
+      font-size: 16px;
+    }
+  }
+}
+
+@media(max-width:700px) {
+  .hero {
+    &__inner {
+      flex-wrap: wrap-reverse;
+      justify-content: center;
+    }
+
+
+    &__title {
+      .decor-circel {
+        &_green {
+          display: none;
+        }
+      }
+    }
+
+    &__btns {
+      .decor-circel {
+        &_gray {
+          transform: scale(1);
+        }
+      }
+    }
+
+    &__image {
+      max-width: 255px;
+      height: 340px;
+
+      .decor-circel {
+        &_gray {
+          opacity: 0.1;
+        }
+
+        &_green {
+          opacity: 0.2;
+        }
+      }
+    }
+
+  }
+
+  .image-hero {
+    &__discount {
+      transform: rotate(-15deg) scale(0.5);
+      top: -50px;
+    }
+
+    &::after {
+      top: 0;
+      width: 700px;
+      height: 595px;
+    }
+  }
+}

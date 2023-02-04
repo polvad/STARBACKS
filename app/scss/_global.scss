@@ -1,0 +1,156 @@
+body {
+  font-family: 'Montserrat', "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.1;
+  color: $primeryClr;
+  background-color: $primeryBg;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  max-width: 1542px;
+  padding: 0 15px;
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1255px;
+  margin: 0 auto;
+}
+
+.main {
+  flex-grow: 1;
+}
+
+.section {
+  padding: 50px 0;
+}
+
+.logo {
+  display: block;
+  font-weight: 800;
+  font-size: 37px;
+}
+
+.title {
+  font-size: 80px;
+  font-weight: 800;
+}
+
+.accent {
+  background-image: $accentLG;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: -3px;
+}
+
+.btn {
+  position: relative;
+  font-size: 24px;
+  line-height: 1.4;
+  font-weight: 600;
+  color: $white;
+  background-image: $accentLG;
+  border-radius: 82px;
+  transition: all 0.5s;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:focus {
+    transform: scale(0.98);
+  }
+
+  &_large {
+    padding: 20px 80px;
+  }
+
+  &_middle {
+    padding: 14px 40px;
+  }
+
+  &_small {
+    padding: 20px 50px;
+  }
+
+}
+
+.circel-decor {
+  position: absolute;
+  font-size: 32px;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-align: center;
+  background-image: url('../images/decor.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.decor-circel {
+  position: absolute;
+  z-index: -1;
+  border-radius: 50%;
+  width: 300px;
+  height: 300px;
+
+  &_green {
+    background: $accentLG;
+    opacity: 0.5;
+    filter: blur(80px);
+  }
+
+  &_gray {
+    background: $primeryClr;
+    opacity: 0.5;
+    filter: blur(80px);
+  }
+}
+
+
+
+@media(max-width:992px) {
+  .btn {
+    &_large {
+      padding: 15px 50px;
+    }
+
+    &_small {
+      padding: 15px 40px;
+    }
+  }
+}
+
+@media(max-width:820px) {
+  .btn {
+    font-size: 16px;
+
+    &_large {
+      padding: 14px 50px;
+    }
+
+    &_small {
+      padding: 14px 35px;
+    }
+  }
+}
+
+@media(max-width: 576px) {
+  .title {
+    font-size: 48px;
+    line-height: 1;
+  }
+
+  .section {
+    padding: 30px 0;
+  }
+}
